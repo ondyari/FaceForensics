@@ -154,10 +154,11 @@ def create_images_from_single_folder(data_path, output_path,
 
         while altered_reader.isOpened():
             _, image = altered_reader.read()
-            _, mask = mask_reader.read()
             _, original_image = original_reader.read()
+            if crop or return_masks:
+                _, mask = mask_reader.read()
 
-            if image is None or mask is None or original_image is None:
+            if image is None or original_image is None:
                 break
 
             if frame_number == image_frames[0]:
@@ -221,7 +222,7 @@ def create_images_from_single_folder(data_path, output_path,
 
 
 def create_images_from_dataset(data_path, output_path, absolute_num, every_nth,
-                               crop_faces=1,
+                               crop=1,
                                scale=1.3,
                                return_masks=0,
                                mask_data_path=None,
@@ -233,16 +234,19 @@ def create_images_from_dataset(data_path, output_path, absolute_num, every_nth,
             else:
                 print(join(data_path, folder))
             if mask_data_path:
-                mask_data_path = join(mask_data_path, folder, 'mask')
+                folder_mask_data_path = join(mask_data_path, folder, 'mask')
+            else:
+                folder_mask_data_path = mask_data_path
             create_images_from_single_folder(data_path=join(data_path, folder),
                                              output_path=join(output_path,
                                                               folder),
                                              absolute_num=absolute_num,
                                              every_nth=every_nth,
-                                             crop=crop_faces,
+                                             crop=crop,
                                              scale=scale,
                                              return_masks=return_masks,
-                                             mask_data_path=mask_data_path)
+                                             mask_data_path=
+                                             folder_mask_data_path)
 
 
 if __name__ == '__main__':
