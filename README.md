@@ -1,4 +1,4 @@
-# FaceForensics++
+# FaceForensics++: Learning to Detect Manipulated Facial Images
 
 ![Header](images/teaser.png)
 
