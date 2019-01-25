@@ -9,7 +9,7 @@ There are two ways to get the dataset: you can use the script to download all im
 The dataset has the following folder structure which will either be produced by the download or generation scripts.
 
 ```shell
-FaceForensic dataset
+FaceForensics++ dataset
 |-- downloaded_videos
     < contains all original downloaded videos, video information files and their extracted sequences
       which can be used to extract the original sequences used in the dataset >
@@ -40,12 +40,12 @@ Here is a overview of the space required to save/download the dataset:
 ### General usage
 Please consult
 
-`python download-FaceForensics.py -h`
+`python download-FaceForensicspp.py -h`
 
 for a detailed overview of the download scrips parameter choices and their respective defaults. The general usage is as follows:
 
 ```shell
-python download-FaceForensics.py
+python download-FaceForensicspp.py
     <output path>
     -d <dataset type, e.g., Face2Face, original or all>
     -c <compression quality, e.g., c23 or raw>
@@ -57,22 +57,28 @@ Generally we advise you to download the compressed videos and extract the frames
 ### Examples
 In order to download all light compressed (i.e., a visually lossless compression rate factor of 23 using the h264 codec) original as well as altered videos of all three manipulation methods use
 
-`python download-Faceforensics.py <output path> -d all -c c23 -t videos`
+`python download-Faceforensicspp.py <output path> -d all -c c23 -t videos`
 
 For all lossless compressed (i.e., a compression rate factor of 0) extracted original images run
 
-`python download-FaceForensics.py <output path> -d original -c c0 -t images`
+`python download-FaceForensicspp.py <output path> -d original -c c0 -t images`
 
 You can also download a random selection of images for each video which shortens and specify a seed for reproduction. For example, for 10 random raw Face2Face images call
 
-`python download-FaceForensics.py <output path> -d Face2Face -c raw -t images--num_images 10 --seed <integer>`
+`python download-FaceForensicspp.py <output path> -d Face2Face -c raw -t images--num_images 10 --seed <integer>`
 
 and with
 
-`python download-FaceForensics.py <output path> -d Face2Face -c raw -t masks --num_images 10 --seed <integer>`
+`python download-FaceForensicspp.py <output path> -d Face2Face -c raw -t masks --num_images 10 --seed <integer>`
 
 you obtain the corresponding masks of the chosen method, i.e., a binary mask indicating the manipulated pixels.
 
 ## 2. Dataset generation
 
 To be released
+
+
+# Requirements
+
+- python3
+- [tqdm](https://github.com/tqdm/tqdm) (install via pip install tqdm)
