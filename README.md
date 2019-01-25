@@ -1,6 +1,6 @@
 # FaceForensics++
 
-![Header](images/header.jpg)
+![Header](images/teaser.png)
 
 ## Overview
 FaceForensics is a forensics dataset consisting of 1000 original video sequences that have been manipulated with three automated face manipulation methods: Deepfakes, Face2Face and FaceSwap. The data has been sourced from 977 youtube videos and all videos contain a trackable mostly frontal face without occlusions which enables automated tampering methods to generate realistic forgeries. As we provide binary masks the data can be used for image and video classification as well as segmentation. In addition, we provide 1000 Deepfakes models to generate and augment new data.
