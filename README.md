@@ -15,7 +15,7 @@ If you have not received a response within a week, it is likely that your email 
 Once, you obtain the download link, please head to the [download section](dataset/README.md). You can also find details about the generation of the dataset there.
 
 ## Original FaceForensics
-You can view the original FaceForensics github [here](/ondyari/FaceForensics/tree/original). Any request will also contain the download link to the original version of our dataset. 
+You can view the original FaceForensics github [here](https://github.com/ondyari/FaceForensics/tree/original). Any request will also contain the download link to the original version of our dataset. 
 
 
 ## Citation
