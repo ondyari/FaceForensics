@@ -36,7 +36,7 @@ If you have any questions, please contact us at [faceforensics@googlegroups.com]
 Please view our youtube video [here](https://www.youtube.com/watch?v=x2g48Q2I2ZQ).
 
 ## Changelog
-23.01.2019: Release of FaceForensics++
+25.01.2019: Release of FaceForensics++
 
 ## License
 The data is released under the [FaceForensics Terms of Use](http://kaldir.vc.in.tum.de/FaceForensics/webpage/FaceForensics_TOS.pdf), and the code is released under the MIT license.
