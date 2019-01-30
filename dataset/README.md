@@ -73,6 +73,12 @@ and with
 
 you obtain the corresponding masks of the chosen method, i.e., a binary mask indicating the manipulated pixels.
 
+### Frame Extraction
+
+If you decided to download the compressed videos, you easily extract the images frames with either `ffmpeg` or `opencv`. You can use
+
+`python extracted_compressed_videos.py <output path> -d <"all" or single dataset via "Face2Face" or "original"> -c c0`
+
 ## 2. Dataset generation
 
 To be released
@@ -80,5 +86,11 @@ To be released
 
 # Requirements
 
+General
 - python3
 - [tqdm](https://github.com/tqdm/tqdm) (install via pip install tqdm)
+
+For compression/Extraction
+- [ffmpeg built with h264](https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu)
+- opencv (install via  pip install opencv-python)
+
