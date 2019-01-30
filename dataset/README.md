@@ -2,7 +2,7 @@
 
 ![Header](../images/teaser.png)
 
-If you would like to download the FaceForensics data, please fill out an agreement to the [FaceForensics Terms of Use](http://kaldir.vc.in.tum.de/FaceForensics/webpage/FaceForensics_TOS.pdf) and send it to us at [faceforensics@googlegroups.com](mailto:faceforensics@googlegroups.com). You will get a link to the download script which will be used throughout this text to obtain the full dataset. This includes 977 downloaded videos from youtube, 1000 original extracted sequences that contain a unobstructed face that can be easily tracked, as well as their manipulated versions using our three methods: Deepfakes, Face2Face and FaceSwap. We also provide all Deepfakes models.
+If you would like to download the FaceForensics++ data, please fill out an agreement to the [FaceForensics Terms of Use](http://kaldir.vc.in.tum.de/FaceForensics/webpage/FaceForensics_TOS.pdf) and send it to us at [faceforensics@googlegroups.com](mailto:faceforensics@googlegroups.com). You will get a link to the download script which will be used throughout this text to obtain the full dataset. This includes 977 downloaded videos from youtube, 1000 original extracted sequences that contain a unobstructed face that can be easily tracked, as well as their manipulated versions using our three methods: Deepfakes, Face2Face and FaceSwap. We also provide all Deepfakes models.
 
 There are two ways to get the dataset: you can use the script to download all images or videos or generate most of the data on your own using the scripts provided in this folder which saves quite a bit of bandwidth if you are interested in the raw image material. However, you will have to download the Face2Face manipulated videos/images as there is no publicly available implementation to generate them from scratch. 
 
@@ -90,7 +90,7 @@ General
 - python3
 - [tqdm](https://github.com/tqdm/tqdm) (install via pip install tqdm)
 
-For compression/Extraction
+For compression/extraction
 - [ffmpeg built with h264](https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu)
 - opencv (install via  pip install opencv-python)
 
