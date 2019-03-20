@@ -7,7 +7,7 @@ Consult our [paper](https://arxiv.org/abs/1803.09179) for more information or wa
 
 ## FaceForensics Data
 
-If you would like to download the FaceForensics data, please fill out an agreement to the [FaceForensics Terms of Use](http://kaldir.vc.in.tum.de/FaceForensics/webpage/FaceForensics_TOS.pdf) and send it to us at [faceforensics@googlegroups.com](mailto:faceforensics@googlegroups.com).
+If you would like to download the FaceForensics++ dataset, please fill out [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdRRR3L5zAv6tQ_CKxmK4W96tAab_pfBu2EKAgQbeDVhmXagg/viewform) and, one accepted, we will send you the link to our download script.
 
 If you have not received a response within a week, it is likely that your email is bouncing - please check this before sending repeat requests.
 
