@@ -23,7 +23,7 @@ If you use the FaceForensics++ data or code please cite:
 ```
 @article{roessler2019faceforensics++,
 	author = {Andreas R\"ossler and Davide Cozzolino and Luisa Verdoliva and Christian Riess and Justus Thies and Matthias Nie{\ss}ner},
-	title = {FaceForensics++: Learning to Detect Manipulated Facial Images},
+	title = {Face{F}orensics++: Learning to Detect Manipulated Facial Images},
 	journal={arXiv},
 	year={2019}
 }
