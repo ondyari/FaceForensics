@@ -71,7 +71,7 @@ If you use the FaceForensics data or code please cite:
 ```
 @article{roessler2018faceforensics,
 	author = {Andreas R\"ossler and Davide Cozzolino and Luisa Verdoliva and Christian Riess and Justus Thies and Matthias Nie{\ss}ner},
-	title = {FaceForensics: A Large-scale Video Dataset for Forgery Detection in Human Faces},
+	title = {Face{F}orensics: A Large-scale Video Dataset for Forgery Detection in Human Faces},
 	journal={arXiv},
 	year={2018}
 }
