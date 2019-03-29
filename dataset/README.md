@@ -81,7 +81,7 @@ If you decided to download the compressed videos, you easily extract the images 
 
 ## 2. Dataset generation
 
-See the [manipulation methods readme](manipulation_methods).
+For DeepFakes and FaceSwap see the respective directories. As Face2Face is not publicly available, you have to download those videos yourself and extract the frames. 
 
 ## 3. File splits
 
