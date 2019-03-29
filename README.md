@@ -8,7 +8,7 @@ FaceForensics++ is a forensics dataset consisting of 1000 original video sequenc
 For more information, please consult our paper.
 
 ## Access
-If you would like to download the FaceForensics++ dataset, please fill out [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdRRR3L5zAv6tQ_CKxmK4W96tAab_pfBu2EKAgQbeDVhmXagg/viewform) and, one accepted, we will send you the link to our download script.
+If you would like to download the FaceForensics++ dataset, please fill out [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdRRR3L5zAv6tQ_CKxmK4W96tAab_pfBu2EKAgQbeDVhmXagg/viewform) and, once accepted, we will send you the link to our download script.
 
 If you have not received a response within a week, it is likely that your email is bouncing - please check this before sending repeat requests.
 
