@@ -3,7 +3,7 @@
 XceptionNet from our paper trained on our FaceForensics++ dataset. Besides the full image models, all models were trained on slightly enlarged face crops with a scale factor of 1.3.
 The models were trained using the Face2Face face tracker, though the `detect_from_models.py` file uses the freely available dlib face detector.
 
-Note that we provide the trained models from our paper which have not been fine-tuned for general compressed videos. You can find our used models under [this link](kaldir.vc.in.tum.de:/FaceForensics/models/faceforensics++_models_subset.zip).  
+Note that we provide the trained models from our paper which have not been fine-tuned for general compressed videos. You can find our used models under [this link](http://kaldir.vc.in.tum.de:/FaceForensics/models/faceforensics++_models.zip). The   
 
 Setup:
 - Install required modules via `requirement.txt` file
