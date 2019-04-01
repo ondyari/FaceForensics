@@ -95,9 +95,25 @@ For DeepFakes and FaceSwap see the respective directories. As Face2Face is not p
 
 Our used dataset file splits can be found in the [respective folder](splits). We used 720 videos for train and 140 videos for validation as well as testing.
 
+## 4. Compression
+
+### Setup
+
+Run `bash setup_ffmpeg_h264.sh` to install ffmpeg together with the h264 codec.
+
+### Paper Compression
+
+Once, you have downloaded/extracted all raw images, you can use
+
+`python compress.py
+    -i <path to FaceForensics++ folder including original and manipulated sequences folders'>`
+
+to compress the data in the same manner as described in the paper. The script additionally contains various wrapper scripts around compression that we used for the project so feel free to check out the source code.
+
 # Requirements
 
 General
+- All scripts tested on Ubuntu 16.04 and 18.04
 - python3
 - [tqdm](https://github.com/tqdm/tqdm) (install via pip install tqdm)
 
