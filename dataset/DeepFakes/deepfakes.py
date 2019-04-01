@@ -265,6 +265,7 @@ if __name__ == '__main__':
     p.add_argument('--iterations', '-it', type=int, default=200000)
     p.add_argument('--keep_temp_directories', action='store_true')
     p.add_argument('--convert_images', action='store_true')
+    p.add_argument('--filelist', type=str, default=None)
     args = p.parse_args()
     mode = args.mode
 
