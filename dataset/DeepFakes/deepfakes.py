@@ -224,12 +224,14 @@ def create_from_models(models_path, images_path, output_path, python_path,
             continue
 
         # 1. Convert images
+        append_models = False
         for chosen_file in [file, file2]:
             tqdm.write('Converting {}'.format(chosen_file))
             swap_models = True if chosen_file == file2 else False
             model_path = join(models_path, file)
             if os.path.exists(join(model_path, 'models')):
                 model_path = join(model_path, 'models')
+                append_models = True
             convert(data_path=join(images_path, chosen_file.split('_')[0]),
                     output_path=join(images_output_path, chosen_file),
                     model_path=model_path,
@@ -244,7 +246,10 @@ def create_from_models(models_path, images_path, output_path, python_path,
         if copy_models:
             tqdm.write('Copy models')
             file_mod_out_path = join(mod_out_path, file)
-            copy_tree(join(models_path, file, 'models'), file_mod_out_path)
+            input_model_path = join(models_path, file)
+            if append_models:
+                input_model_path = join(input_model_path, 'models')
+            copy_tree(input_model_path, file_mod_out_path)
 
 
 if __name__ == '__main__':
