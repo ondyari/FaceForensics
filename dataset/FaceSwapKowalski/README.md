@@ -1,4 +1,4 @@
-# FaceSwap image sequence manipulation
+# FaceSwap Image Sequence Manipulation
 
 ## Install
 
@@ -14,7 +14,7 @@ python faceswap.py
     -i1 <source folder, images in format '04d.png'>
     -i2 <target folder, images in format '04d.png'>.
 ```
-The default output will be in a new folder named `output`. For more information run `python faecswap.py -h`. 
+The default output will be in a new folder named `output`. We return the manipulated image sequence as well as the used mask. For more information run `python faecswap.py -h`. 
 
 
 ## Requirements
