@@ -14,7 +14,9 @@ python faceswap.py
     -i1 <source folder, images in format '04d.png'>
     -i2 <target folder, images in format '04d.png'>.
 ```
-The default output will be in a new folder named `output`. We return the manipulated image sequence as well as the used mask. For more information run `python faecswap.py -h`. 
+The default output will be in a new folder named `output`. We return the manipulated image sequence as well as the used mask. For more information run `python faecswap.py -h`.
+
+Note: The FaceSwap script will manipulate `min(#frames of video1, #frames of video2)` frames as we always swap faces of two corresponding frames. This means that the number of manipulated frames for FaceSwap will be lower than our other two manipulation methods. 
 
 
 ## Requirements
