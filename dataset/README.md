@@ -73,6 +73,14 @@ and with
 
 you obtain the corresponding masks of the chosen method, i.e., a binary mask indicating the manipulated pixels.
 
+### Original Videos
+
+You can download the original videos that were downloaded from youtube using
+
+`python download-FaceForensicspp.py <output path> -d original_youtube_videos`
+
+The zipped file contains all downloaded videos in their original length as well as a json file containing the frames that were extracted for our dataset. Note: we only downloaded the source video without audio. However, you can re-download and extract the audio using the frame numbers.
+
 ### Frame Extraction
 
 If you decided to download the compressed videos, you easily extract the images frames with either `ffmpeg` or `opencv`. You can use
