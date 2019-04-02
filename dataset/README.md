@@ -106,7 +106,7 @@ Run `bash setup_ffmpeg_h264.sh` to install ffmpeg together with the h264 codec.
 Once, you have downloaded/extracted all raw images, you can use
 
 `python compress.py
-    -i <path to FaceForensics++ folder including original and manipulated sequences folders'>`
+    -i <path to FaceForensics++ folder including original and manipulated sequences folders>`
 
 to compress the data in the same manner as described in the paper. The script additionally contains various wrapper scripts around compression that we used for the project so feel free to check out the source code.
 
