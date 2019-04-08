@@ -42,7 +42,9 @@ Please view our youtube video [here](https://www.youtube.com/watch?v=x2g48Q2I2ZQ
 
 ## Changelog
 06.04.2019: Updated sample and added benchmark
+
 02.04.2019: Updated our arxiv paper, switched to google forms, release of dataset generation methods and added a classification sample
+
 25.01.2019: Release of FaceForensics++
 
 ## License
