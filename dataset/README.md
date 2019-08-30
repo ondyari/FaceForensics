@@ -57,6 +57,7 @@ python download-FaceForensics_v3.py
 ```
 
 We advise you to download the compressed videos and extract the frames on your own as the raw file sizes are quite large. If you are interested in reproducing our steps, you might consider generating them by yourself as outlined below.
+
 *Update:* We no longer offer the download of images as you can extract those from the lossless compressed c0 videos
 
 ### Examples
@@ -64,17 +65,13 @@ In order to download all light compressed (i.e., a visually lossless compression
 
 `python download-Faceforensics_v3.py <output path> -d all -c c23 -t videos`
 
-For all lossless compressed (i.e., a compression rate factor of 0) extracted original images run
+For all lossless compressed (i.e., a compression rate factor of 0) extracted original videos run
 
-`python download-FaceForensics_v3.py <output path> -d original -c c0 -t images`
+`python download-FaceForensics_v3.py <output path> -d original -c c0 -t videos`
 
-You can also download a random selection of images for each video which shortens and specify a seed for reproduction. For example, for 10 random raw Face2Face images call
+With
 
-`python download-FaceForensics_v3.py <output path> -d Face2Face -c raw -t images--num_images 10 --seed <integer>`
-
-and with
-
-`python download-FaceForensics_v3.py <output path> -d Face2Face -c raw -t masks --num_images 10 --seed <integer>`
+`python download-FaceForensics_v3.py <output path> -d Face2Face -t masks`
 
 you obtain the corresponding masks of the chosen method, i.e., a binary mask indicating the manipulated pixels.
 
@@ -84,13 +81,29 @@ You can download the original videos that were downloaded from youtube using
 
 `python download-FaceForensics_v3.py <output path> -d original_youtube_videos`
 
-The zipped file contains all downloaded videos in their original length as well as a json file containing the frames that were extracted for our dataset. Note: we only downloaded the source video without audio. However, you can re-download and extract the audio using the frame numbers.
+The zipped file contains all downloaded videos in their original length as well as a json file containing the frames that were extracted for our dataset.
+
+
+### Audio
+
+We only downloaded the source video without audio. However, you can re-download and extract the audio using the frame numbers that you obtain by downloading the original youtube videos. If you want to save bandwidth, you can only obtain the frame location and youtube ids using:
+
+`python download-FaceForensics_v3.py <output path> -d original_youtube_videos_info`
+
+### Masks
+
+We provide binary masks for all our manipulation methods. For FaceSwap and Face2Face those masks are pretty self-explanatory. However, it is more difficult for DeepFakes and NeuralTextures.
+- Deepfakes: after we feed in our face through the auto-encoder and warp it back to the image, we apply Poisson image editing. This process is done on a rectangular box around the face. Please consult the [DeepFakes readme](datasets/DeepFakes).
+- NeuralTextures: NeuralTextures takes a 1.7 scaled part around the face bounding box of the Face2Face tracker as input and manipulates the whole region. However, the method has skip connections which allow it to directly copy pixel values from non-face areas of this crop. The NeuralTexture masks report the tracking results for those regions, though we will upload the manipulated regions as well and add more details to this process soon.
+
 
 ### Frame Extraction
 
-If you decided to download the compressed videos, you easily extract the images frames with either `ffmpeg` or `opencv`. You can use
+You easily extract the images frames with either `ffmpeg` or `opencv`. You can use
 
 `python extracted_compressed_videos.py <output path> -d <"all" or single dataset via "Face2Face" or "original"> -c c0`
+
+The c0/raw videos are lossless compressed, meaning the extracted images (saved as a png) are 100% the same as our raw images used in the paper (tested using opencv for extraction).
 
 ## 2. Dataset generation
 
