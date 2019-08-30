@@ -12,7 +12,7 @@ import cv2
 
 
 def extract_sequences(data_path, **kwargs):
-    images_out_path = join(data_path, 'original_sequences2', 'raw', 'images')
+    images_out_path = join(data_path, 'original_sequences', 'raw', 'images')
     downloaded_videos_path = join(data_path, 'downloaded_videos')
 
     for video_id in tqdm(sorted(os.listdir(downloaded_videos_path))):
