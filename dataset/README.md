@@ -14,62 +14,67 @@ FaceForensics++ dataset
     < contains all original downloaded videos, video information files and their extracted sequences
       which can be used to extract the original sequences used in the dataset >
 |-- original_sequences
-    < original sequence images/videos/compressed>
+    < c0/raw original sequence images/videos >
+    < c23/hq original sequence images/videos >
+    < c40/lq original sequence images/videos >
 |-- manipulated_sequenecs
     |-- Deepfakes
-    < Deepfake sequence images/videos/compressed as well as models and masks after poisson image editing>
+    < Deepfake sequence images/videos of all three compression degrees as well as models and masks after poisson image editing>
     |-- Face2Face
-    < Face2Face sequence images/videos/compressed as well as masks >
+    < Face2Face sequence images/videos of all three compression degrees as well as masks >
     |-- FaceSwap
-    < FaceSwap sequence images/videos/compressed as well as masks >
+    < FaceSwap sequence images/videos of all three compression degrees as well as masks >
+    |-- NeuralTextures
+    < NeuralTextures sequence images/videos of all three compression degrees as well as masks >
 ```
 
 We renamed all original sequences to integers between `0` and `999`. The original youtube id's can be recovered using `conversion_dict.json`.
 
 Here is a overview of the space required to save/download the dataset:
 
-- Downladed videos: 38.5GB
+- The original downladed videos from youtube: 38.5GB
 - All h264 compressed videos with compression rate factor
-    - 0: ~200GB
+    - 0: ~400GB
     - 23: ~8GB
     - 40: ~1GB
-- All raw extracted images: 1.5TB
+- All raw extracted images as pngs: ~2TB
 
 ## 1. Download script
 
 ### General usage
 Please consult
 
-`python download-FaceForensicspp.py -h`
+`python download-FaceForensics_v3.py -h`
 
 for a detailed overview of the download scrips parameter choices and their respective defaults. The general usage is as follows:
 
 ```shell
-python download-FaceForensicspp.py
+python download-FaceForensics_v3.py
     <output path>
     -d <dataset type, e.g., Face2Face, original or all>
     -c <compression quality, e.g., c23 or raw>
-    -t <file type, e.g., images, videos, masks or models>
+    -t <file type, e.g., videos, masks or models>
 ```
 
-Generally we advise you to download the compressed videos and extract the frames on your own as the raw file sizes are quite large. If you are interested in the raw material, you might consider generating them by yourself as outlined below.
+We advise you to download the compressed videos and extract the frames on your own as the raw file sizes are quite large. If you are interested in reproducing our steps, you might consider generating them by yourself as outlined below.
+*Update:* We no longer offer the download of images as you can extract those from the lossless compressed c0 videos
 
 ### Examples
 In order to download all light compressed (i.e., a visually lossless compression rate factor of 23 using the h264 codec) original as well as altered videos of all three manipulation methods use
 
-`python download-Faceforensicspp.py <output path> -d all -c c23 -t videos`
+`python download-Faceforensics_v3.py <output path> -d all -c c23 -t videos`
 
 For all lossless compressed (i.e., a compression rate factor of 0) extracted original images run
 
-`python download-FaceForensicspp.py <output path> -d original -c c0 -t images`
+`python download-FaceForensics_v3.py <output path> -d original -c c0 -t images`
 
 You can also download a random selection of images for each video which shortens and specify a seed for reproduction. For example, for 10 random raw Face2Face images call
 
-`python download-FaceForensicspp.py <output path> -d Face2Face -c raw -t images--num_images 10 --seed <integer>`
+`python download-FaceForensics_v3.py <output path> -d Face2Face -c raw -t images--num_images 10 --seed <integer>`
 
 and with
 
-`python download-FaceForensicspp.py <output path> -d Face2Face -c raw -t masks --num_images 10 --seed <integer>`
+`python download-FaceForensics_v3.py <output path> -d Face2Face -c raw -t masks --num_images 10 --seed <integer>`
 
 you obtain the corresponding masks of the chosen method, i.e., a binary mask indicating the manipulated pixels.
 
@@ -77,7 +82,7 @@ you obtain the corresponding masks of the chosen method, i.e., a binary mask ind
 
 You can download the original videos that were downloaded from youtube using
 
-`python download-FaceForensicspp.py <output path> -d original_youtube_videos`
+`python download-FaceForensics_v3.py <output path> -d original_youtube_videos`
 
 The zipped file contains all downloaded videos in their original length as well as a json file containing the frames that were extracted for our dataset. Note: we only downloaded the source video without audio. However, you can re-download and extract the audio using the frame numbers.
 
