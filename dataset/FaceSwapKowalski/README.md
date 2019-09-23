@@ -1,5 +1,8 @@
 # FaceSwap Image Sequence Manipulation
 
+## Example video
+![example video](../../images/faceswap.gif)
+
 ## Install
 
 - Install python 2.7 and requirements file by running `pip install -r requirements.txt`
