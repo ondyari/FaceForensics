@@ -1,6 +1,6 @@
 # DeepFakesDetection Dataset
 
-Please see the [original blog post]() for more information.
+Please see the [original blog post of the authors]() for more information.
 
 ## Example Video
 ![example video](../../images/deepfakesdetection.gif)
