@@ -69,12 +69,12 @@ Here is a overview of the space required to save/download the dataset:
 ### General usage
 Please consult
 
-`python download-FaceForensics_v4.py -h`
+`python download-FaceForensics.py -h`
 
 for a detailed overview of the download scrips parameter choices and their respective defaults. The general usage is as follows:
 
 ```shell
-python download-FaceForensics_v4.py
+python download-FaceForensics.py
     <output path>
     -d <dataset type, e.g., Face2Face, original or all>
     -c <compression quality, e.g., c23 or raw>
@@ -88,21 +88,21 @@ We advise you to download the compressed videos and extract the frames on your o
 ### Examples
 In order to download all light compressed (i.e., a visually lossless compression rate factor of 23 using the h264 codec) original as well as altered videos of all three manipulation methods use
 
-`python download-Faceforensics_v4.py <output path> -d all -c c23 -t videos`
+`python download-Faceforensics.py <output path> -d all -c c23 -t videos`
 
 If you are only interested in a few samples of the dataset, say 10, append `--num_videos 10`. 
 
 For all raw/lossless compressed (i.e., a compression rate factor of 0) extracted original videos run
 
-`python download-FaceForensics_v4.py <output path> -d original -c raw -t videos`
+`python download-FaceForensics.py <output path> -d original -c raw -t videos`
 
 The DeepFakesDetection dataset videos can be obtained by running
 
-`python download-FaceForensics_v4.py <output path> -d <DeepFakesDetection or DeepFakesDetection_original>-c raw -t videos`
+`python download-FaceForensics.py <output path> -d <DeepFakesDetection or DeepFakesDetection_original>-c raw -t videos`
 
 With
 
-`python download-FaceForensics_v4.py <output path> -d Face2Face -t masks`
+`python download-FaceForensics.py <output path> -d Face2Face -t masks`
 
 you obtain the corresponding masks of the chosen method, i.e., a binary mask indicating the manipulated pixels.
 
@@ -110,18 +110,18 @@ you obtain the corresponding masks of the chosen method, i.e., a binary mask ind
 
 You can download the original videos that were downloaded from youtube using
 
-`python download-FaceForensics_v4.py <output path> -d original_youtube_videos`
+`python download-FaceForensics.py <output path> -d original_youtube_videos`
 
 The zipped file contains all downloaded videos in their original length as well as a json file containing the frames that were extracted for our dataset. If you are only interested in the frame locations and video information because you want to download them on your own, use:
 
-`python download-FaceForensics_v4.py <output path> -d original_youtube_videos_info`
+`python download-FaceForensics.py <output path> -d original_youtube_videos_info`
 
 
 ### Audio
 
 We only downloaded the source video without audio. However, you can re-download and extract the audio using the frame numbers that you obtain by downloading the original youtube videos. If you want to save bandwidth, you can only obtain the frame location and youtube ids using:
 
-`python download-FaceForensics_v3.py <output path> -d original_youtube_videos_info`
+`python download-FaceForensics.py <output path> -d original_youtube_videos_info`
 
 ### Masks
 
