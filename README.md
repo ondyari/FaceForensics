@@ -11,7 +11,7 @@ For more information, please consult [our updated paper](https://arxiv.org/abs/1
 
 ## What is new
 
-![ddd_samples](images/DDD_smaples.gif)
+![ddd_samples](images/DDD_samples.gif)
 
 - __[Deep Fake Detection Dataset](https://ai.googleblog.com/2019/09/contributing-data-to-deepfake-detection.html):__ We are hosting the Deep Fake Detection Dataset provided by Google & JigSaw. The dataset contains over 3000 manipulated videos from 28 actors in various scenes. The dataset has a similar file structure and is downloaded by default together with the regular dataset. See the [dataset](dataset) page for more information. 
 
