@@ -1,6 +1,6 @@
 # DeepFakeDetection Dataset
 
-Please see the [original blog post of the authors]() for more information.
+Please see the [original blog post of the authors](https://ai.googleblog.com/2019/09/contributing-data-to-deepfake-detection.html) for more information.
 
 ## Example Video
 ![example video](../../images/deepfakedetection.gif)
