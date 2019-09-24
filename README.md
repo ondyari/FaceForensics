@@ -52,7 +52,7 @@ Please view our youtube video [here](https://www.youtube.com/watch?v=x2g48Q2I2ZQ
 [![youtubev_video](https://img.youtube.com/vi/x2g48Q2I2ZQ/0.jpg)](https://www.youtube.com/watch?v=x2g48Q2I2ZQ)
 
 ## Changelog
-23.09.2019: Added sample videos as well as the Deepfakes Detection Dataset
+23.09.2019: Added sample videos as well as the Deep Fake Detection Dataset
 
 30.08.2019: Paper got accepted to ICCV 2019! Updated the download script to include NeuralTextures and changed instructions
 
@@ -63,6 +63,6 @@ Please view our youtube video [here](https://www.youtube.com/watch?v=x2g48Q2I2ZQ
 25.01.2019: Release of FaceForensics++
 
 ## License
-The data is released under the [FaceForensics Terms of Use](http://kaldir.vc.in.tum.de/FaceForensics/webpage/FaceForensics_TOS.pdf), and the code is released under the MIT license.
+The data is released under the [FaceForensics Terms of Use](http://kaldir.vc.in.tum.de/faceforensics_tos.pdf), and the code is released under the MIT license.
 
 Copyright (c) 2019
