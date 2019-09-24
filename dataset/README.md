@@ -106,6 +106,10 @@ With
 
 you obtain the corresponding masks of the chosen method, i.e., a binary mask indicating the manipulated pixels.
 
+### Servers
+
+We will offer two servers in the near future which can be selected by add `--server <EU or US>`. Note that we are currently still backing up files and thus only the default option `EU` will work for now.
+
 ### Original Videos
 
 You can download the original videos that were downloaded from youtube using
