@@ -11,6 +11,8 @@ For more information, please consult [our updated paper](https://arxiv.org/abs/1
 
 ## What is new
 
+![ddd_samples](images/DDD_smaples.gif)
+
 - __[Deep Fake Detection Dataset](https://ai.googleblog.com/2019/09/contributing-data-to-deepfake-detection.html):__ We are hosting the Deep Fake Detection Dataset provided by Google & JigSaw. The dataset contains over 3000 manipulated videos from 28 actors in various scenes. The dataset has a similar file structure and is downloaded by default together with the regular dataset. See the [dataset](dataset) page for more information. 
 
 - __Neural Textures:__ We included a fourth manipulation method that does face manipulation using GANs and [Neural Textures](https://arxiv.org/pdf/1904.12356.pdf). All results have been updated to incorporate the new manipulation method and we have updated the benchmark as well. We refer to the paper for more information.
