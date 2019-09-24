@@ -3,7 +3,7 @@
 Please see the [original blog post of the authors]() for more information.
 
 ## Example Video
-![example video](../../images/DeepFakeDetection.gif)
+![example video](../../images/deepfakedetection.gif)
 
 ## Masks
 In comparison to the FaceForensics++ dataset, the DeepFakeDetection manipulated videos masks are directly extracted after the manipulation.
