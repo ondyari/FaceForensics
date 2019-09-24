@@ -2,7 +2,7 @@
 
 ![Header](../images/teaser.png)
 
-If you would like to download the FaceForensics++ data, please fill out [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdRRR3L5zAv6tQ_CKxmK4W96tAab_pfBu2EKAgQbeDVhmXagg/viewform) and, once accepted, we will send you the link to our download script.. You will get a link to the download script which will be used throughout this text to obtain the full dataset. This includes 977 downloaded videos from youtube, 1000 original extracted sequences that contain a unobstructed face that can be easily tracked, as well as their manipulated versions using our three methods: Deepfakes, Face2Face and FaceSwap. We also provide all Deepfakes models.
+If you would like to download the FaceForensics, FaceForensics++ or the DeepFakeDetection data, please fill out [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdRRR3L5zAv6tQ_CKxmK4W96tAab_pfBu2EKAgQbeDVhmXagg/viewform) and, once accepted, we will send you the link to our download script. You will get a link to the download script which will be used throughout this text to obtain the full dataset. This includes 977 downloaded videos from youtube, 1000 original extracted sequences that contain a unobstructed face that can be easily tracked, as well as their manipulated versions using our four methods: Deepfakes, Face2Face, FaceSwap and NeuralTextures. We also provide all Deepfakes models. The DeepFakeDetection dataset contains over 363 original sequences from 28 paid actors in 16 different scenes as well as over 3000 manipulated videos using DeepFakes.
 
 ![example video face2face](../images/face2face.gif)  
 (Example of a Face2Face manipulated video, videos of other methods can be found in their respective folders)
@@ -22,11 +22,11 @@ FaceForensics++ dataset
         < c23/hq original sequence images/videos >
         < c40/lq original sequence images/videos >
     |-- actors
-        < images/videos from the DeepFakesDetection dataset >
+        < images/videos from the DeepFakeDetection dataset >
 |-- manipulated_sequences
     |-- Deepfakes
         < images/videos of all three compression degrees as well as models and masks after poisson image editing>
-    |-- DeepFakesDetection
+    |-- DeepFakeDetection
         < images/videos ... as well as masks >
     |-- Face2Face
         < images/videos ... as well as masks >
@@ -38,11 +38,11 @@ FaceForensics++ dataset
 
 ### Original sequence filenames
 - FaceForensics++: We renamed all original sequences saved in the `youtube` folder to integers between `0` and `999`. The original youtube id's can be recovered using `conversion_dict.json`.
-- DeepFakesDetection: The original DeepFakesDetection sequences are stored in the `actors` folder. The sequence filenames are of the form `<actor number>__<scene name>`.
+- DeepFakeDetection: The original DeepFakeDetection sequences are stored in the `actors` folder. The sequence filenames are of the form `<actor number>__<scene name>`.
 
 ### Manipulated sequence filenames
 - FaceForensics++: All filenames are of the form `<target sequence>_<source sequence>` so you can easily identify the sources.
-- DeepFakesDetection: We employ a similar naming scheme here, however it is a little bit more tricky. The naming scheme is `<target actor>_<source actor>__<sequence name>__<8 charactor long experiment id>`. The experiment id is necessary as some actor pairings have been recorded multiple times.
+- DeepFakeDetection: We employ a similar naming scheme here, however it is a little bit more tricky. The naming scheme is `<target actor>_<source actor>__<sequence name>__<8 charactor long experiment id>`. The experiment id is necessary as some actor pairings have been recorded multiple times.
 
 ### Space requirement
 Here is a overview of the space required to save/download the dataset:
@@ -54,7 +54,7 @@ Here is a overview of the space required to save/download the dataset:
         - 23: ~10GB
         - 40: ~2GB
     - All raw extracted images as pngs: ~2TB
-- DeepFakesDetection:
+- DeepFakeDetection:
     - The 363 original source actor videos:
         - raw/0: ~200GB
         - 23: ~3GB
@@ -96,9 +96,9 @@ For all raw/lossless compressed (i.e., a compression rate factor of 0) extracted
 
 `python download-FaceForensics.py <output path> -d original -c raw -t videos`
 
-The DeepFakesDetection dataset videos can be obtained by running
+The DeepFakeDetection dataset videos can be obtained by running
 
-`python download-FaceForensics.py <output path> -d <DeepFakesDetection or DeepFakesDetection_original>-c raw -t videos`
+`python download-FaceForensics.py <output path> -d <DeepFakeDetection or DeepFakeDetection_original>-c raw -t videos`
 
 With
 
@@ -128,7 +128,7 @@ We only downloaded the source video without audio. However, you can re-download 
 We provide binary masks for all our manipulation methods. For FaceSwap and Face2Face those masks are pretty self-explanatory. However, it is more difficult for DeepFakes and NeuralTextures.
 - Deepfakes: after we feed in our face through the auto-encoder and warp it back to the image, we apply Poisson image editing. This process is done on a rectangular box around the face. Please consult the [DeepFakes readme](datasets/DeepFakes).
 - NeuralTextures: NeuralTextures takes a 1.7 scaled part around the face bounding box of the Face2Face tracker as input and manipulates the whole region. However, the method has skip connections which allow it to directly copy pixel values from non-face areas of this crop. The NeuralTexture masks report the tracking results for those regions, though we will upload the manipulated regions as well and add more details to this process soon.
-- DeepFakesDetection: masks are provided direcly after DeepFake output and thus are not rectangular shaped as the Deepfakes masks provided in FaceForensics++. We will provide those in the near future.
+- DeepFakeDetection: masks are provided direcly after DeepFake output and thus are not rectangular shaped as the Deepfakes masks provided in FaceForensics++. We will provide those in the near future.
 
 
 ### Frame Extraction
