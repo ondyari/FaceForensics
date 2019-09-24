@@ -108,7 +108,7 @@ you obtain the corresponding masks of the chosen method, i.e., a binary mask ind
 
 ### Servers
 
-We will offer two servers in the near future which can be selected by add `--server <EU or US>`. Note that we are currently still backing up files and thus only the default option `EU` will work for now.
+We will offer two servers in the near future which can be selected by add `--server <EU or CA>`. Note that we are currently still backing up files and thus only the default option `EU` will work for now.
 
 ### Original Videos
 
