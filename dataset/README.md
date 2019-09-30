@@ -108,7 +108,7 @@ you obtain the corresponding masks of the chosen method, i.e., a binary mask ind
 
 ### Servers
 
-We will offer two servers in the near future which can be selected by add `--server <EU or CA>`. Note that we are currently still backing up files and thus only the default option `EU` will work for now.
+We will offer two servers in the near future which can be selected by add `--server <EU or CA>`. If the `EU` server is not working for you, you can also try `EU2` which has been reported to work in some of those instances. However, ¸`EU2` just links to `EU` internally so you will not be able to accelerate your download by using them both.
 
 ### Original Videos
 
