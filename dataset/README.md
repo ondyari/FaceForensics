@@ -127,6 +127,8 @@ We only downloaded the source video without audio. However, you can re-download 
 
 `python download-FaceForensics.py <output path> -d original_youtube_videos_info`
 
+The connection between youtube id's and original sequences is done via [this file](conversion_dict.json).
+
 ### Masks
 
 We provide binary masks for all our manipulation methods. For FaceSwap and Face2Face those masks are pretty self-explanatory. However, it is more difficult for DeepFakes and NeuralTextures.
