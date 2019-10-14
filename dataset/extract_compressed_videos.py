@@ -15,12 +15,15 @@ from tqdm import tqdm
 
 
 DATASET_PATHS = {
-    'original': 'original_sequences',
+    'original': 'original_sequences/youtube',
+    'DeepFakeDetection_original': 'original_sequences/actors',
     'Deepfakes': 'manipulated_sequences/Deepfakes',
+    'DeepFakeDetection': 'manipulated_sequences/DeepFakeDetection',
     'Face2Face': 'manipulated_sequences/Face2Face',
-    'FaceSwap': 'manipulated_sequences/FaceSwap'
+    'FaceSwap': 'manipulated_sequences/FaceSwap',
+    'NeuralTextures': 'manipulated_sequences/NeuralTextures',
 }
-COMPRESSION = ['c0', 'c23', 'c40']
+COMPRESSION = ['raw', 'c23', 'c40']
 
 
 def extract_frames(data_path, output_path, method='cv2'):
@@ -68,7 +71,7 @@ if __name__ == '__main__':
                    choices=list(DATASET_PATHS.keys()) + ['all'],
                    default='all')
     p.add_argument('--compression', '-c', type=str, choices=COMPRESSION,
-                   default='c0')
+                   default='raw')
     args = p.parse_args()
 
     if args.dataset == 'all':
