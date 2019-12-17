@@ -28,7 +28,7 @@ If you have not received a response within a week, it is likely that your email 
 Once, you obtain the download link, please head to the [download section](dataset/README.md). You can also find details about the generation of the dataset there.
 
 ## [Benchmark](http://kaldir.vc.in.tum.de/faceforensics_benchmark/)
-We are offering an [automated benchmark](http://kaldir.vc.in.tum.de/faceforensics_benchmark/) for facial manipulation detection on the presence of compression based on our manipulation methods that contains 1000 images. If you are interested to test your approach on unseen data, check it out! For more information, please consult [our paper](https://arxiv.org/abs/1901.08971). You can download the benchmark images [here](http://kaldir.vc.in.tum.de/faceforensics_benchmark_example_submission.zip).
+We are offering an [automated benchmark](http://kaldir.vc.in.tum.de/faceforensics_benchmark/) for facial manipulation detection on the presence of compression based on our manipulation methods that contains 1000 images. If you are interested to test your approach on unseen data, check it out! For more information, please consult [our paper](https://arxiv.org/abs/1901.08971). You can download the benchmark images [here](http://kaldir.vc.in.tum.de/faceforensics_benchmark_images.zip).
 
 
 ## Original FaceForensics
