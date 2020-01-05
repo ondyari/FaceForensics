@@ -132,12 +132,13 @@ def test_full_image_network(video_path, model_path, output_path,
     face_detector = dlib.get_frontal_face_detector()
 
     # Load model
-    model, *_ = model_selection(modelname='xception', num_out_classes=2)
+    pretrained = (model_path is None)
+    model, *_ = model_selection(modelname='xception', num_out_classes=2, pretrained=pretrained)
     if model_path is not None:
         model = torch.load(model_path)
         print('Model found in {}'.format(model_path))
     else:
-        print('No model found, initializing random model.')
+        print('No model found, using pretrained model.')
     if cuda:
         model = model.cuda()
 
