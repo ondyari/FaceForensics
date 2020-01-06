@@ -55,9 +55,9 @@ class TransferModel(nn.Module):
                 )
         elif modelchoice == 'resnet50' or modelchoice == 'resnet18':
             if modelchoice == 'resnet50':
-                self.model = torchvision.models.resnet50(pretrained=True)
+                self.model = torchvision.models.resnet50(pretrained=pretrained)
             if modelchoice == 'resnet18':
-                self.model = torchvision.models.resnet18(pretrained=True)
+                self.model = torchvision.models.resnet18(pretrained=pretrained)
             # Replace fc
             num_ftrs = self.model.fc.in_features
             if not dropout:
