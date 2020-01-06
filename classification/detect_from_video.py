@@ -222,7 +222,7 @@ if __name__ == '__main__':
     p = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     p.add_argument('--video_path', '-i', type=str)
-    p.add_argument('--model_path', '-mi', type=str, default=None)
+    p.add_argument('--model_path', '-m', type=str, default=None)
     p.add_argument('--output_path', '-o', type=str,
                    default='.')
     p.add_argument('--start_frame', type=int, default=0)
