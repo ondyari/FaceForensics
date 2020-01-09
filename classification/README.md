@@ -26,10 +26,9 @@ Setup (requires Python 3):
     source venv/bin/activate
     ```
 - Install required modules via `requirement.txt` file
-- Download pre-trained models
+- Download pre-trained models ([`wget`](http://gnuwin32.sourceforge.net/packages/wget.htm) allows easier download)
     ```shell
-    wget http://kaldir.vc.in.tum.de/FaceForensics/models/faceforensics++_models.zip
-    unzip faceforensics++_models.zip
+    wget -O model/xception-b5690688.pth http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth
     ```
 - Run detection from a single video file or folder with
     ```shell
