@@ -9,7 +9,14 @@ FaceForensics++ is a forensics dataset consisting of 1000 original video sequenc
 
 For more information, please consult [our updated paper](https://arxiv.org/abs/1901.08971).
 
+## Server Status
+After a power outage, our EU servers are up again. Unfortunately, we are still have some issues with the Canadian server (CA). Please use the EU hosts (EU, EU2) for now until we resolve the issue and remove this message.
+
 ## What is new
+
+-__[FaceShifter](https://lingzhili.com/FaceShifterPage/):__
+We are including the two-stage FaceShifter face swapping method that has been published in CVPR2020. It is able to generate high fidelity identity preserving face swap results and, in comparison to our previous methods, deal with facial occlusions using a second synthesis stage consisting of a Heuristic Error Acknowledging Refinement Network (HEAR-Net). All 1000 original videos of the original youtube based dataset have been manipulated. Please check them out on [their project page](https://lingzhili.com/FaceShifterPage/) for more information! See its [dataset page](dataset/FaceShifter/README.md) for updated numbers as well as an example video.
+If you want to access the new data and have already applied for our download script, simply reuse the original download link to get the updated script. Otherwise, please fill out [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdRRR3L5zAv6tQ_CKxmK4W96tAab_pfBu2EKAgQbeDVhmXagg/viewform) and, once accepted, we will send you the link to our download script.
 
 <p align="center">
   <img width="460" height="300" src="images/DDD_samples.gif">
@@ -56,6 +63,8 @@ Please view our youtube video [here](https://www.youtube.com/watch?v=x2g48Q2I2ZQ
 [![youtubev_video](https://img.youtube.com/vi/x2g48Q2I2ZQ/0.jpg)](https://www.youtube.com/watch?v=x2g48Q2I2ZQ)
 
 ## Changelog
+15.07.2020: Added FaceShifter
+
 23.09.2019: Added sample videos as well as the Deep Fake Detection Dataset
 
 30.08.2019: Paper got accepted to ICCV 2019! Updated the download script to include NeuralTextures and changed instructions
