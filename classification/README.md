@@ -5,15 +5,38 @@ The models were trained using the Face2Face face tracker, though the `detect_fro
 
 Note that we provide the trained models from our paper which have not been fine-tuned for general compressed videos. You can find our used models under [this link](http://kaldir.vc.in.tum.de:/FaceForensics/models/faceforensics++_models.zip).   
 
-Setup:
+Setup (requires Python 3):
+- Install `virtualenv`: 
+    ```shell
+    pip install virtualenv
+    ```
+- Create a Python virtual environment:
+    ```shell
+    virtualenv env
+    ```
+- Activate virtual environment:
+    1. Windows:
+    ```shell
+    cd venv\Scripts
+    activate
+    cd ..\..
+    ```
+    2. Lunix / Mac:
+    ```shell
+    source venv/bin/activate
+    ```
 - Install required modules via `requirement.txt` file
+- Download pre-trained models ([`wget`](http://gnuwin32.sourceforge.net/packages/wget.htm) allows easier download)
+    ```shell
+    wget -O model/xception-b5690688.pth http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth
+    ```
 - Run detection from a single video file or folder with
-```shell
-python detect_from_video.py
--i <path to input video or folder of videos with extenstion '.mp4' or '.avi'>
--m <path to model file, default is imagenet model
--o <path to output folder, will contain output video(s)
-```  
+    ```shell
+    python detect_from_video.py
+    -i <path to input video or folder of videos with extenstion '.mp4' or '.avi'>
+    -m <path to model file, default is imagenet model
+    -o <path to output folder, will contain output video(s)
+    ```  
 from the classification folder. Enable cuda with ```--cuda```  or see parameters with ```python detect_from_video.py -h```.
 
 
