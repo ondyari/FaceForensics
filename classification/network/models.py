@@ -38,11 +38,11 @@ class TransferModel(nn.Module):
     Simple transfer learning model that takes an imagenet pretrained model with
     a fc layer as base model and retrains a new fc layer for num_out_classes
     """
-    def __init__(self, modelchoice, num_out_classes=2, dropout=0.0):
+    def __init__(self, modelchoice, num_out_classes=2, dropout=0.0, pretrained=True):
         super(TransferModel, self).__init__()
         self.modelchoice = modelchoice
         if modelchoice == 'xception':
-            self.model = return_pytorch04_xception()
+            self.model = return_pytorch04_xception(pretrained)
             # Replace fc
             num_ftrs = self.model.last_linear.in_features
             if not dropout:
@@ -55,9 +55,9 @@ class TransferModel(nn.Module):
                 )
         elif modelchoice == 'resnet50' or modelchoice == 'resnet18':
             if modelchoice == 'resnet50':
-                self.model = torchvision.models.resnet50(pretrained=True)
+                self.model = torchvision.models.resnet50(pretrained=pretrained)
             if modelchoice == 'resnet18':
-                self.model = torchvision.models.resnet18(pretrained=True)
+                self.model = torchvision.models.resnet18(pretrained=pretrained)
             # Replace fc
             num_ftrs = self.model.fc.in_features
             if not dropout:
@@ -116,18 +116,21 @@ class TransferModel(nn.Module):
 
 
 def model_selection(modelname, num_out_classes,
-                    dropout=None):
+                    dropout=None, pretrained=True):
     """
     :param modelname:
     :return: model, image size, pretraining<yes/no>, input_list
     """
     if modelname == 'xception':
         return TransferModel(modelchoice='xception',
-                             num_out_classes=num_out_classes), 299, \
-               True, ['image'], None
+                             num_out_classes=num_out_classes,
+                             pretrained=pretrained), \
+               299, True, ['image'], None
     elif modelname == 'resnet18':
-        return TransferModel(modelchoice='resnet18', dropout=dropout,
-                             num_out_classes=num_out_classes), \
+        return TransferModel(modelchoice='resnet18',
+                             dropout=dropout,
+                             num_out_classes=num_out_classes,
+                             pretrained=pretrained), \
                224, True, ['image'], None
     else:
         raise NotImplementedError(modelname)
