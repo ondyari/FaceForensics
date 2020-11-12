@@ -6,7 +6,7 @@ The models were trained using the Face2Face face tracker, though the `detect_fro
 Note that we provide the trained models from our paper which have not been fine-tuned for general compressed videos. You can find our used models under [this link](http://kaldir.vc.in.tum.de:/FaceForensics/models/faceforensics++_models.zip).   
 
 Setup:
-- Install required modules via `requirement.txt` file
+- Install required modules via `requirements.txt` file
 - Run detection from a single video file or folder with
 ```shell
 python detect_from_video.py
