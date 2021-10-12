@@ -18,7 +18,7 @@ munch==2.3.2
 numpy==1.16.2
 nvidia-ml-py3==7.352.0
 olefile==0.46
-opencv-python==3.4.1.15
+opencv-python==3.4.7.28
 pathlib==1.0.1
 Pillow==5.4.1
 pretrainedmodels==0.7.4
