@@ -1,7 +1,7 @@
 certifi==2018.11.29
 dlib==19.16.0
 MySQL-python==1.2.5
-numpy==1.15.4
+numpy==1.22.0
 pathlib==1.0.1
 progressbar==2.5
 progressbar2==3.39.2
