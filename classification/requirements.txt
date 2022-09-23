@@ -22,7 +22,7 @@ opencv-python==3.4.1.15
 pathlib==1.0.1
 Pillow==5.4.1
 pretrainedmodels==0.7.4
-protobuf==3.6.1
+protobuf==3.18.3
 pycparser==2.19
 scandir==1.7
 six==1.12.0
