@@ -1,6 +1,6 @@
 absl-py==0.4.0
 astor==0.7.1
-certifi==2018.11.29
+certifi==2022.12.7
 cffi==1.12.1
 cmake==3.12.0
 dlib==19.15.0
